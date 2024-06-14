@@ -9,15 +9,23 @@
     "client": "cd frontend && npm start",
     "server": "cd backend && npm start",
     "dev": "console-ninja nodemon ./api/app.js",
-    "build": "concurrently \"npm run build-server\" \"npm run build-client\"",
-    "build-client": "cd frontend && npm run build",
-    "build-server": "cd backend && npm run build",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
     "test": "concurrently \"npm run test-server\" \"npm run test-client\"",
     "test-client": "cd frontend && npm test",
     "test-server": "cd backend && npm test"
   },
   "author": "codeWithBablu",
   "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.2",
+    "socket.io": "^4.7.5"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2"
   }
