@@ -1,0 +1,70 @@
+@import "../../styles/global/responsive.scss";
+
+nav {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+  @include md {
+    height: 70px;
+  }
+
+  a {
+    transition: all 0.4s ease;
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 3;
+
+    .navLinks {
+      a {
+        &:hover {
+          color: #db2777;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+
+    @include lg {
+      background-color: transparent;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    background-color: rgba(25, 25, 25, 0.8);
+    backdrop-filter: blur(30px);
+    height: 100dvh;
+    top: 0%;
+    right: -50%;
+    width: 50%;
+    transition: all 0.4s ease-in-out;
+
+    a {
+      display: initial;
+      &:hover {
+        color: #6b7280;
+      }
+    }
+
+    &.active {
+      right: 0;
+    }
+  }
+}

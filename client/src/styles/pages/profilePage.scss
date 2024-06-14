@@ -1,0 +1,32 @@
+@import "../global/responsive.scss";
+
+.profilePage {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+
+  .details {
+    flex: 3;
+    overflow-y: scroll;
+    padding-bottom: 100px;
+
+    .wrapper {
+      padding-right: 20px;
+
+      @include xl {
+        padding-right: 0;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0px;
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+  }
+}

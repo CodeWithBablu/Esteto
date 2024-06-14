@@ -1,0 +1,93 @@
+@import "@radix-ui/themes/styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* Color of the scrollbar handle */
+  border-radius: 5px; /* Rounded corners of the scrollbar handle */
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* Hide the scrollbar arrows */
+}
+
+::-webkit-scrollbar-track {
+  display: none; /* Hide the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4b5563; /* Color of the scrollbar handle when hovered */
+}
+
+html,
+body {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-7000 {
+  animation-delay: 7s;
+}
+
+.remove-arrow::-webkit-inner-spin-button,
+.remove-arrow::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@layer base {
+  /* //chillax */
+  @font-face {
+    font-family: "Chillax";
+    src: url("/fonts/chillax/Chillax-Light.woff2") format("woff2");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "Chillax";
+    src: url("/fonts/chillax/Chillax-Regular.woff2") format("woff2");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Chillax";
+    src: url("/fonts/chillax/Chillax-Medium.woff2") format("woff2");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Chillax";
+    src: url("/fonts/chillax/Chillax-Semibold.woff2") format("woff2");
+    font-weight: 600;
+  }
+}

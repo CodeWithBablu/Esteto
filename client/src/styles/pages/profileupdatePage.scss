@@ -1,0 +1,95 @@
+@import "../global/responsive.scss";
+
+.profileUpdatePage {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+
+  @include md {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .formContainer {
+    flex: 3;
+    height: 100%;
+
+    @include md {
+      order: 1;
+      flex: 1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease-in;
+      gap: 20px;
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #f43f5e;
+        font-weight: 500;
+      }
+
+      input {
+        padding: 15px 15px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        min-width: 300px;
+
+        @include md {
+          background: #ffffff00;
+        }
+
+        &::placeholder {
+          color: #4b5563;
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4f46e5;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:disabled {
+          background-color: #bed9d8;
+          cursor: not-allowed;
+        }
+      }
+
+      a {
+        font-size: 14px;
+        color: #4b5563;
+        border-bottom: 1px solid gray;
+        width: max-content;
+      }
+    }
+  }
+
+  .sideContainer {
+    flex: 2;
+
+    img {
+      max-width: 350px;
+      height: 15rem;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @include md {
+      order: 0;
+      flex: 0.5;
+
+      img {
+        max-width: 350px;
+        height: 10rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@import "../global/responsive.scss";
+
+.card {
+  gap: 20px;
+
+  @include md {
+    max-width: 450px;
+  }
+
+  .imgContainer {
+    flex: 2;
+
+    @include md {
+      flex: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      min-width: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .textContainer {
+    flex: 3;
+
+    @include md {
+      flex: none;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .cardTitle {
+      font-size: 20px;
+      font-family: "chillax";
+      font-weight: 500;
+      color: #4b5563;
+      transition: all 0.4s ease;
+
+      @include md {
+        font-size: 16px;
+      }
+
+      &:hover {
+        scale: 1.01;
+        color: #18181b;
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      color: #6b7280;
+      display: flex;
+      // align-items: start;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .price {
+      font-weight: 500;
+      font-size: 20px;
+      color: #2563eb;
+    }
+
+    .bottom {
+      .features {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .feature {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+
+          @include lg {
+            flex-direction: row;
+            gap: 10px;
+          }
+        }
+      }
+
+      .icons {
+        .icon {
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          border: 1px solid #2563eb;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            scale: 0.95;
+            opacity: 70%;
+          }
+        }
+      }
+    }
+  }
+}

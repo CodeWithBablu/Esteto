@@ -1,0 +1,102 @@
+@import "../../styles/global/responsive.scss";
+
+.newPostPage {
+  height: 100%;
+  display: flex;
+  gap: 10px;
+
+  @include lg {
+    flex-direction: column;
+  }
+
+  .formContainer {
+    flex: 3;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      padding: 0px 5px;
+      width: 100%;
+      margin: 30px 50px 100px 0px;
+
+      form {
+        gap: 20px;
+
+        .item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          label {
+            display: flex;
+            align-content: center;
+            gap: 5px;
+          }
+
+          input {
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid;
+            border-color: #a1a1aa;
+            outline: none;
+
+            &:focus {
+              border-color: #2563eb;
+            }
+          }
+
+          input.m-input {
+            padding-left: 50px;
+          }
+
+          select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #a1a1aa;
+            background-color: transparent;
+            outline: none;
+
+            &:focus {
+              border-color: #2563eb;
+            }
+          }
+
+          &.description {
+            width: 100%;
+            grid-column: span 3;
+            height: 320px;
+
+            @include lg {
+              grid-column: span 2;
+            }
+
+            .quill > .ql-container > .ql-editor {
+              height: 200px;
+              font-size: 16px;
+
+              @include md {
+                height: 130px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sideContainer {
+    flex: 2;
+
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+}

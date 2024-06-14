@@ -1,0 +1,38 @@
+@import "../global/responsive.scss";
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #e0e0e0;
+      background-color: #ffffff;
+      color: #4b5563;
+      border-radius: 5px;
+      font-size: 14px;
+      outline: none;
+
+      &:focus {
+        border-color: #2563eb;
+      }
+
+      &::placeholder {
+        color: #4b5563;
+      }
+    }
+  }
+}
